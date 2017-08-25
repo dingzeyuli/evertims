@@ -124,7 +124,8 @@ int main (int argc, char **argv)
     s->attachReader (re);
     re->attachSolver (s);
     
-    re->start ();
+    re->start (); // start a background job to listen to Blender's signals
+
     COUT << "Reader object started. \n";
     
     VisualizationWriter *vw;
